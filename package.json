@@ -1,0 +1,64 @@
+{
+  "_from": "github:chaac-tech/react-native-multiple-tags",
+  "_id": "react-native-multiple-tags@0.0.4",
+  "_inBundle": false,
+  "_location": "/react-native-multiple-tags",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-multiple-tags@github:chaac-tech/react-native-multiple-tags",
+    "name": "react-native-multiple-tags",
+    "escapedName": "react-native-multiple-tags",
+    "rawSpec": "github:chaac-tech/react-native-multiple-tags",
+    "saveSpec": "github:chaac-tech/react-native-multiple-tags",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:chaac-tech/react-native-multiple-tags#1fae416a50bac5d9def710deafc2111ad3cab136",
+  "_spec": "react-native-multiple-tags@github:chaac-tech/react-native-multiple-tags",
+  "_where": "/Users/guillaumenepveu/Documents/Code/coral-react",
+  "author": {
+    "name": "Caleb Tolu"
+  },
+  "bugs": {
+    "url": "https://github.com/caleb-tolu/react-native-multiple-tags/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.2.1",
+    "prop-types": "^15.5.10"
+  },
+  "deprecated": false,
+  "description": "Multiple Select using Tags including default Selected Tags",
+  "homepage": "https://github.com/caleb-tolu/react-native-multiple-tags#readme",
+  "keywords": [
+    "react",
+    "react-native",
+    "native",
+    "multiple",
+    "select",
+    "tags",
+    "list",
+    "search",
+    "radio",
+    "button"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-multiple-tags",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caleb-tolu/react-native-multiple-tags.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.4"
+}
