@@ -12,6 +12,10 @@ const styles = {
     alignItems: 'center',
     flexDirection: 'row',
   },
+  titleStyle: {
+    color: 'white',
+    fontSize: 18
+},
   tagSearchWrapper: {
     color: 'white',
     flexDirection: 'row',
@@ -26,7 +30,7 @@ const styles = {
     marginBottom: 5,
   },
   showTagsContainer: {
-    height: 30,
+    height: 60,
   },
   textInputStyle: {
     flex: 1,
@@ -35,6 +39,8 @@ const styles = {
     maxHeight: 30,
     padding: 0,
     textAlignVertical: 'center',
+    color: 'white',
+    fontSize: 18,
     // backgroundColor: 'blue',
   },
   iconStyle: {
@@ -42,6 +48,7 @@ const styles = {
     maxWidth: 20,
     marginRight: 5,
     textAlign: 'center',
+    color: 'white',
   },
   eachTag: {
     padding: 2,
@@ -55,11 +62,13 @@ const styles = {
     borderColor: '#d7d8d9',
   },
   eachTagIcon: {
-    color: '#676869',
+    // color: '#676869',
+    color: 'white',
     marginLeft: 5,
   },
   eachTagIconAdd: {
-    color: '#676869',
+    // color: '#676869',
+    color: 'white',
     marginRight: 5,
   },
   showAvailTagsView: {
@@ -88,7 +97,8 @@ const styles = {
     marginTop: 2,
   },
   notFoundStyle: {
-    fontSize: 14,
+    color: 'white',
+    fontSize: 18,
     fontWeight: '500',
   },
   textActionBtn: {
@@ -101,7 +111,8 @@ const styles = {
     marginLeft: 5,
   },
   labelActiveTag: {
-    fontSize: 14,
+    color: 'white',
+    fontSize: 18,
   },
 };
 
@@ -110,6 +121,7 @@ const {
   tagSearchWrapper,
   showTagsContainer,
   textInputStyle,
+  titleStyle,
   iconStyle,
   textActionBtn,
   btnAction,
@@ -131,7 +143,7 @@ class MultipleTags extends Component {
       searchFilterTag: [],
       selectedTag: [],
       previousCharacter: '',
-      show: false,
+      show: true,
       totalViewWidth: 0,
       totalIndex: 0,
       object: false,
@@ -333,9 +345,9 @@ class MultipleTags extends Component {
 
     return (
       <View style={showAvailTagsViewNotFound}>
-        <Text style={notFoundStyle}>
-          { show ? defaultInstructionOpen : defaultInstructionClosed }
-        </Text>
+         {/* <Text style={notFoundStyle}>
+      //     { show ? defaultInstructionOpen : defaultInstructionClosed }
+      //   </Text> */}
       </View>
     );
   }
@@ -367,7 +379,7 @@ class MultipleTags extends Component {
           showIconAdd
           &&
           <Text>
-            <Icon name={iconAddName} size={sizeIconTag} />
+            <Icon style={{color: 'white'}} name={iconAddName} size={sizeIconTag} />
           </Text>
         }
         <Text style={labelActiveTag}> { object ? this.ucwords(item[objectValueIdentifier]) : this.ucwords(item) }</Text>
@@ -384,9 +396,9 @@ class MultipleTags extends Component {
         style={eachTag}
         onPress={() => this.removeTag(item)}
       >
-        <Text> { object ? this.ucwords(item[objectValueIdentifier]) : this.ucwords(item) }</Text>
+        <Text style={{color: 'white', fontSize: 18}}> { object ? this.ucwords(item[objectValueIdentifier]) : this.ucwords(item) }</Text>
         <Text style={eachTagIcon} >
-          <Icon name="ios-trash-outline" size={15} />
+          <Icon name="ios-trash-outline" size={18} />
         </Text>
       </TouchableOpacity>
     );
@@ -398,23 +410,18 @@ class MultipleTags extends Component {
     return (
       <View>
         <View style={textActionBtn}>
-          <Text onPress={() => this.changeVisibility()}>{title} </Text>
+          <Text style={titleStyle}onPress={() => this.changeVisibility()}>{title} </Text>
           <Text
             onPress={() => this.changeVisibility()}
             style={btnAction}
           >
-            <Icon
-              style={iconStyle}
-              size={20}
-              name={this.state.show ? 'ios-arrow-dropup-outline' : 'ios-arrow-dropdown-outline'}
-            />
           </Text>
         </View>
         <View style={showTagsWrapper}>
           {this.showSelectedTags()}
         </View>
         {
-          !show || (
+         //!show || (
             <View>
               {
                 !search || (
@@ -427,7 +434,7 @@ class MultipleTags extends Component {
                         onChangeText={value => this.setTagsBasedOnQuery(value)}
                         placeholder="search..."
                       />
-                      <Icon style={iconStyle} size={15} name="ios-search-outline" />
+                      <Icon style={iconStyle} size={18} name="ios-search-outline" />
                     </View>
                   )
                 )
@@ -441,7 +448,7 @@ class MultipleTags extends Component {
                 )
               }
             </View>
-          )
+          //)
         }
       </View>
     );
@@ -487,3 +494,4 @@ MultipleTags.defaultProps = {
 };
 
 export default MultipleTags;
+
