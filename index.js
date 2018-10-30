@@ -14,9 +14,9 @@ const styles = {
   },
   titleStyle: {
     color: 'white',
-    fontSize: 18,
-    paddingBotton: 25,
-    
+    fontSize: 16,
+    marginBotton: 10,
+    paddingBotton: 35,
 },
   tagSearchWrapper: {
     color: 'white',
